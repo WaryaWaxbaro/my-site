@@ -1,0 +1,167 @@
+//RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;  //1200px;
+$bp-large: 62.5em;  //1000px;
+$bp-medium: 50em;  //800px;
+$bp-small: 37.5em;  //600px;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%;
+
+  @media screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+.App {
+  display: grid;
+  grid-template-rows: min-content, min-content;
+  grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+}
+
+.Container {
+  grid-row: 2 / span 1;
+  grid-column: 2 / 10;
+  height: calc(100vh - 8rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Nav {
+  grid-row: 1 / span 1;
+  grid-column: 2 / 10;
+  height: 8rem;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+
+    &--item {
+      margin-right: 4rem;
+
+      &-link {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        line-height: 1.6;
+        letter-spacing: .3rem;
+        text-decoration: none;
+        color: red;
+
+        &:hover {
+          color: white;
+        }
+      }
+
+      &-active {
+        color: blue;
+      }
+    }
+  }
+}
+
+.Info {
+  height: 100%;
+  width: 30%;
+  padding: 0 3rem;
+  background-color: lightgreen;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--img {
+      height: 15rem;
+      width: 15rem;
+      margin-bottom: 6rem;
+      position: relative;
+
+      &::before {
+        content: '';
+        height: 16.5rem;
+        width: 16.5rem;
+        display: inline-block;
+        position: absolute;
+        top: -.75rem;
+        left: -.75rem;
+        background-color: transparent;
+        border-radius: 50%;
+        border: .2rem solid green;
+      }
+
+      &::after {
+        content: '';
+        height: 18rem;
+        width: 18rem;
+        display: inline-block;
+        position: absolute;
+        top: -1.5rem;
+        left: -1.5rem;
+        background-color: transparent;
+        border-radius: 50%;
+        border: .4rem solid red;
+        transition: all .6s;
+      }
+
+      &:hover::after {
+        border: .4rem solid yellow;
+      }
+
+      &:hover &-1 {
+        border: .4rem solid yellow;
+        transform: scale(1.2);
+      }
+
+      &-1{
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: all .6s;
+        border: .1rem solid blue;
+      }
+    }
+
+    &--text {
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+      line-height: 1.6rem;
+      text-align: center;
+
+      &-heading-1{
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      &-heading-2{
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.Pages {
+  height: 100%;
+  width: 70%;
+  background-color: lightpink;
+}
