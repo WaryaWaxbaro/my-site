@@ -2,7 +2,19 @@
 $bp-largest: 75em;  //1200px;
 $bp-large: 62.5em;  //1000px;
 $bp-medium: 50em;  //800px;
+$bp-medium-s: 43.75em; //700px;
 $bp-small: 37.5em;  //600px;
+$bp-smallest: 31.25em;  //500px;
+
+$fontstyle-main: 'Quicksand', sans-serif;
+$fontstyle-sub: 'Varela Round', sans-serif;
+
+$color-main: #5ea8f5;
+$color-main-dark: #2ebef2;
+$color-secondary: #f5ab5e;
+$color-secondary-2 : #5ef3f5;
+$color-secondary-3: #605ef5;
+$color-tertiary: #f55ea8;
 
 *,
 *::after,
@@ -25,6 +37,7 @@ html {
   display: grid;
   grid-template-rows: min-content, min-content, min-content;
   grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+  background-color: #f2f2f2;
 }
 
 .Container {
@@ -35,20 +48,55 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: $bp-medium-s) {
+    flex-direction: column;
+  }
 }
 
 .Nav {
   grid-row: 1 / span 1;
   grid-column: 2 / 10;
   height: 8rem;
-  background-color: lightblue;
+  font-family: $fontstyle-main;
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  flex-direction: row-reverse;
+  margin-left: auto;
+  overflow: hidden;
+
+  &__icon {
+    height: 100%;
+    width: 10rem;
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    cursor: pointer;
+    color: $color-main-dark;
+    background-color: #f2f2f2;
+    z-index: 10;
+
+    & span {
+      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
 
   &__list {
     list-style-type: none;
     display: flex;
+    z-index: 8;
+    transition: all .6s;
 
     &--item {
       margin-right: 4rem;
@@ -59,20 +107,70 @@ html {
         line-height: 1.6;
         letter-spacing: .3rem;
         text-decoration: none;
-        color: red;
+        color: $color-main;
 
         &:hover {
-          color: white;
-        }
-
-        &:active > .About {
-          background-color: red;
+          color: $color-main-dark;
         }
       }
 
       &-active {
-        color: blue;
+        color: $color-secondary;
       }
+    }
+  }
+}
+
+
+.heading {
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: $color-main;
+}
+
+.heading-sub {
+  line-height: 1.6;
+  letter-spacing: .2rem;
+  font-size: 1.8rem;
+  text-align: left;
+  margin-bottom: 2rem;
+  color: $color-main;
+}
+
+.paragraph {
+  letter-spacing: .2rem;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  color: #4c4c4c;
+}
+
+.list {
+  list-style-type: none;
+  line-height: 1.6;
+  letter-spacing: .2rem;
+  margin-bottom: 2rem;
+
+  &:last-child {
+    padding-bottom: 4rem;
+  }
+
+  &__item {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #4c4c4c;
+
+    &-icon {
+      margin-right: 4rem;
+    }
+
+    &-skill {
+
     }
   }
 }
@@ -81,11 +179,22 @@ html {
   height: 100%;
   width: 30%;
   padding: 0 3rem;
-  background-color: lightgreen;
+  //background-color: lightgreen;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: $bp-medium-s) {
+    //flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: $bp-small) {
+    padding: 0 1rem;
+  }
 
   &__content {
     display: flex;
@@ -93,11 +202,33 @@ html {
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: $bp-medium-s) {
+      flex-direction: row;
+    }
+
+    @media screen and (max-width: $bp-small) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: $bp-smallest) {
+      justify-content: space-between;
+    }
+
     &--img {
       height: 15rem;
       width: 15rem;
       margin-bottom: 6rem;
       position: relative;
+
+      @media screen and (max-width: $bp-medium-s) {
+        margin: 3rem;
+      }
+
+      @media screen and (max-width: $bp-small) {
+        height: 10rem;
+        width: 10rem;
+        margin: 1rem;
+      }
 
       &::before {
         content: '';
@@ -109,7 +240,12 @@ html {
         left: -.75rem;
         background-color: transparent;
         border-radius: 50%;
-        border: .2rem solid green;
+        border: .2rem solid $color-secondary-3;
+
+        @media screen and (max-width: $bp-small) {
+          height: 11.5rem;
+          width: 11.5rem;
+        }
       }
 
       &::after {
@@ -122,16 +258,21 @@ html {
         left: -1.5rem;
         background-color: transparent;
         border-radius: 50%;
-        border: .4rem solid red;
+        border: .4rem solid $color-secondary-2;
         transition: all .6s;
+
+        @media screen and (max-width: $bp-small) {
+          height: 13rem;
+          width: 13rem;
+        }
       }
 
       &:hover::after {
-        border: .4rem solid yellow;
+        border: .4rem solid $color-main;
       }
 
       &:hover &-1 {
-        border: .4rem solid yellow;
+        border: .4rem solid $color-main;
         transform: scale(1.2);
       }
 
@@ -141,7 +282,7 @@ html {
         border-radius: 50%;
         overflow: hidden;
         transition: all .6s;
-        border: .1rem solid blue;
+        border: .1rem solid $color-main-dark;
       }
     }
 
@@ -150,15 +291,32 @@ html {
       letter-spacing: .2rem;
       line-height: 1.6rem;
       text-align: center;
+      color: $color-main-dark;
+
+      @media screen and (max-width: $bp-medium-s) {
+        margin-left: 2rem;
+      }
 
       &-heading-1{
         font-size: 1.8rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
+        margin-bottom: 2rem;
+        font-family: $fontstyle-main;
+        font-weight: 500;
+
+        @media screen and (max-width: $bp-small) {
+          font-size: 1.6rem;
+        }
       }
 
       &-heading-2{
+        font-family: $fontstyle-sub;
+        font-weight: 400;
         font-size: 1.2rem;
+        color: #4c4c4c;
+
+        @media screen and (max-width: $bp-small) {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -167,15 +325,22 @@ html {
 .Pages {
   height: 100%;
   width: 70%;
-  background-color: lightpink;
-  overflow: hidden;
+  //background-color: $color-tertiary;
+  //overflow: hidden;
+  //overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .Footer {
   grid-row: 3 / span 1;
   grid-column: 2 / 10;
+  font-family: $fontstyle-main;
+  font-weight: 400;
   height: 4rem;
   width: 100%;
+  color: $color-main-dark;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,10 +360,90 @@ html {
 .Skills,
 .Project,
 .Contact {
-  font-size: 4rem;
+  font-family: $fontstyle-sub;
   text-align: center;
+  padding: 3rem;
   width: 100%;
   height: 100%;
+
+  @media screen and (max-width: $bp-small) {
+    padding: 0;
+  }
+}
+
+.Skills,
+.Contact,
+.Project {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+/*   overflow-y: auto;
+  padding-right: 2rem;
+  box-sizing: content-box; */
+}
+
+.Project {
+
+  &__item {
+    display: grid;
+    grid-template-rows: auto-fit;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    row-gap: 2rem;
+    column-gap: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    margin-right: 2.5rem;
+
+    &:last-child {
+      padding-bottom: 10rem;
+      margin-bottom: 10rem;
+    }
+
+    &--content {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      border: 2px solid rgba(216,216,216,.5);
+      border-radius: .5rem;
+      letter-spacing: .2rem;
+      box-shadow: 1px 2px 1rem rgba(0,0,0, .2);
+
+      &:hover {
+        box-shadow: 1px 1px 1.5rem rgba(0,0,0, .3);
+      }
+
+      &-h1 {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+        color: $color-main;
+      }
+
+      &-p {
+        align-self: flex-start;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        color: #4c4c4c;
+      }
+
+      &-a {
+        align-self: flex-end;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        background-color: $color-main-dark;
+        border-radius: 10rem;
+        color: #f7f7f7;
+        font-weight: 600;
+        margin-bottom: 1rem;
+
+        &:hover {
+          background-color: $color-secondary;
+        }
+      }
+    }
+  }
 }
 
 .example-enter {

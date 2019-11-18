@@ -1,4 +1,7 @@
 import React from "react";
+import profile from '../img/profile.png';
+
+//const placeholder = 'https://via.placeholder.com/50x50.png';
 
 export default function Info() {
   return (
@@ -7,8 +10,8 @@ export default function Info() {
           <div className="Info__content--img">
           <img
           className="Info__content--img-1"
-          src="https://via.placeholder.com/50x50.png"
-          alt="placeholder"
+          src={profile}
+          alt="profile"
         />
           </div>
         <div className="Info__content--text">

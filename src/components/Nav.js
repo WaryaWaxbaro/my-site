@@ -1,20 +1,18 @@
-import React from 'react';
-import {NavLink} from 'react-router-dom';
+import React from "react";
+import NavItems from "./NavItems";
+import { useToggleState } from "../hooks/useToggleState";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-const linkNames = ['about', 'skills', 'project', 'contact'];
-
-export default function Nav(){
-    return(
-        <nav className='Nav'>
-            <ul className='Nav__list'>
-                {linkNames.map((name, index) => (
-                    <li className='Nav__list--item' key={index}>
-                        <NavLink activeClassName='Nav__list--item-active' className='Nav__list--item-link' to={`/${name}`}>
-                            {name}
-                        </NavLink>
-                    </li>
-                ))}
-            </ul>
-        </nav>
-    );
+export default function Nav() {
+  const [active, toggle] = useToggleState(false);
+  return (
+    <nav className="Nav">
+      <div className="Nav__icon">
+        <span onClick={toggle}>
+          {active ? <FaTimes /> : <FaBars />}
+        </span>
+      </div>
+      <NavItems active={active} />
+    </nav>
+  );
 }
