@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function Project(){
     return(
-        <div>PROJECT PAGE</div>
+        <div className='Project'>PROJECT PAGE</div>
     );
 }

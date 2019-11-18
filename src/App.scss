@@ -17,20 +17,20 @@ html {
   font-size: 62.5%;
 
   @media screen and (max-width: $bp-largest) {
-    font-size: 50%;
+    //font-size: 50%;
   }
 }
 
 .App {
   display: grid;
-  grid-template-rows: min-content, min-content;
+  grid-template-rows: min-content, min-content, min-content;
   grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
 }
 
 .Container {
   grid-row: 2 / span 1;
   grid-column: 2 / 10;
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 12rem);
 
   display: flex;
   align-items: center;
@@ -63,6 +63,10 @@ html {
 
         &:hover {
           color: white;
+        }
+
+        &:active > .About {
+          background-color: red;
         }
       }
 
@@ -164,4 +168,57 @@ html {
   height: 100%;
   width: 70%;
   background-color: lightpink;
+  overflow: hidden;
+}
+
+.Footer {
+  grid-row: 3 / span 1;
+  grid-column: 2 / 10;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+
+    &--copyright {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.About,
+.Skills,
+.Project,
+.Contact {
+  font-size: 4rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.example-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.example-leave.example-leave-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 300ms ease-in;
 }
