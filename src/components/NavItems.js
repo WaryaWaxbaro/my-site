@@ -5,9 +5,9 @@ const linkNames = ["about", "skills", "project", "contact"];
 
 function NavItems({active}) {
   let anim = active ? {
-    transform: 'translateX(0)'
+    transform: 'translate(0, -50%)'
   } : {
-    transform: 'translateX(100%)'
+    transform: 'translate(100%, -50%)'
   };
 
   return (

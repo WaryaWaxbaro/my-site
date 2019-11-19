@@ -7,12 +7,12 @@ export default function Nav() {
   const [active, toggle] = useToggleState(false);
   return (
     <nav className="Nav">
-      <div className="Nav__icon">
-        <span onClick={toggle}>
-          {active ? <FaTimes /> : <FaBars />}
-        </span>
+      <div className="Nav__content">
+        <div className="Nav__icon">
+          <span onClick={toggle}>{active ? <FaTimes /> : <FaBars />}</span>
+        </div>
+        <NavItems active={active} />
       </div>
-      <NavItems active={active} />
     </nav>
   );
 }
