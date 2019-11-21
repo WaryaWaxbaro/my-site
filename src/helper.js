@@ -21,7 +21,7 @@ import {
 } from 'react-icons/fa';
 
 export const contentText = {
-  about: 'I am a junior developer. I have experience in Web and Mobile development. I am currently doing random projects with JavaScript, React and Node. My favourite programming language is JavaScript which I am still learning. I like using React for my personal projects because it is straight forward, I just need to close every open tag of a Component, or I will get a warning for not doing so.',
+  about: 'I am a junior Software Developer. I have experience in Web and Mobile development. I am currently doing random projects with JavaScript, React and Node. My favourite programming language is JavaScript which I am still learning. I like using React for my personal projects because it is straight forward, I just need to close every open tag of a Component, or I will get a warning for not doing so.',
   skills: {
     heading1: 'Skill level Good',
     heading2: 'Skill level Intermediate/Basic',

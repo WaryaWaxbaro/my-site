@@ -170,6 +170,7 @@ html {
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 3rem;
+  margin-top: 2rem;
   text-align: center;
   color: $color-main;
 
@@ -408,13 +409,25 @@ html {
 
 .Pages {
   height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+    padding-right: 2rem;
+    box-sizing: content-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.Scrollable {
+  height: 100%;
   width: 70%;
-  //background-color: $color-tertiary;
+  //padding-right: 2rem;
+  box-sizing: content-box;
+
   overflow: hidden;
   //overflow-y: auto;
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;
 }
 
 .Footer {
@@ -461,29 +474,6 @@ html {
   display: flex;
   align-items: center;
   flex-direction: column;
-  overflow-y: auto;
-  padding-right: 2rem;
-  box-sizing: content-box; 
-
-  @media screen and (max-width: $bp-smallest) {
-    padding-right: 1rem;
-  }
-}
-
-.Skills {
-  margin-right: 37rem;
-
-  @media screen and (max-width: $bp-medium-l) {
-    margin-right: 30rem;
-  }
-
-  @media screen and (max-width: $bp-medium) {
-    margin-right: 25rem;
-  }
-
-  @media screen and (max-width: $bp-smallest) {
-    margin-right: 15rem;
-  }
 }
 
 .Project {
