@@ -48,6 +48,7 @@ export const contentText = {
     ]
   },
   projects: [
+    {name: 'Share a joke', description: 'Share a Joke a MERN stack application that display\'s current weather of a specific city and shows list of jokes that was submitted.', link: 'https://joke-weather-api.herokuapp.com/'},
     {name: 'my city', description: 'MyCity is a web application where a user can submit their favourite image of their city.', link: 'https://stormy-dawn-25100.herokuapp.com/cities'},
     {name: 'cibada', description: 'A client project that displays daily timetables.', link: 'http://cibada.com/'},
     {name: 'lights out', description: 'Lights Out is a game that toggles patterns resembling light on and light off states.', link: 'https://waryawaxbaro.github.io/lightsout/'},
