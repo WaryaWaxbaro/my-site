@@ -48,7 +48,7 @@ export const contentText = {
     ]
   },
   projects: [
-    {name: 'whare a joke', description: 'Share a Joke a MERN stack application that display\'s current weather of a specific city and shows list of jokes that were submitted.', link: 'https://joke-weather-api.herokuapp.com/'},
+    {name: 'share a joke', description: 'Share a Joke a MERN stack application that display\'s current weather of a specific city and shows list of jokes that were submitted.', link: 'https://joke-weather-api.herokuapp.com/'},
     {name: 'word educator', description: 'Baro word educator is an application that displays images and it\'s corresponding names in different languages.', link: 'https://waryawaxbaro.github.io/Baro-word-educator/#/'},
     {name: 'jar game', description: 'Jar Kabood is a game that the player moves over it\'s opponent\'s objects. The player get a point if it moves over and the opponent looses a soldier.', link: 'https://waryawaxbaro.github.io/portofolio/jarkabood.html'},
     {name: 'my city', description: 'MyCity is a web application where a user can submit their favourite image of their city.', link: 'https://stormy-dawn-25100.herokuapp.com/cities'},
