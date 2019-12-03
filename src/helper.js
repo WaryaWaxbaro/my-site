@@ -48,13 +48,15 @@ export const contentText = {
     ]
   },
   projects: [
-    {name: 'Share a joke', description: 'Share a Joke a MERN stack application that display\'s current weather of a specific city and shows list of jokes that was submitted.', link: 'https://joke-weather-api.herokuapp.com/'},
+    {name: 'whare a joke', description: 'Share a Joke a MERN stack application that display\'s current weather of a specific city and shows list of jokes that were submitted.', link: 'https://joke-weather-api.herokuapp.com/'},
+    {name: 'word educator', description: 'Baro word educator is an application that displays images and it\'s corresponding names in different languages.', link: 'https://waryawaxbaro.github.io/Baro-word-educator/#/'},
+    {name: 'jar game', description: 'Jar Kabood is a game that the player moves over it\'s opponent\'s objects. The player get a point if it moves over and the opponent looses a soldier.', link: 'https://waryawaxbaro.github.io/portofolio/jarkabood.html'},
     {name: 'my city', description: 'MyCity is a web application where a user can submit their favourite image of their city.', link: 'https://stormy-dawn-25100.herokuapp.com/cities'},
     {name: 'cibada', description: 'A client project that displays daily timetables.', link: 'http://cibada.com/'},
     {name: 'lights out', description: 'Lights Out is a game that toggles patterns resembling light on and light off states.', link: 'https://waryawaxbaro.github.io/lightsout/'},
     {name: 'menu & weather', description: 'A mobile application that displays OAMK\'s daily menu and weather forecast for that day.', link: 'https://github.com/WaryaWaxbaro/menuweather'},
-    {name: 'Bluetooth app', description: 'Bluetooth photo-sharing app is an application that helps to send and receive images through Bluetooth. This was a school project and we did as a group.', link: 'https://github.com/WaryaWaxbaro/bt-image-app-code'},
-    {name: 'Door sensor', description: 'This is a Raspberry PI project that detects movement around the main door of a house, it captures images and sends via Telegram.', link: 'https://github.com/WaryaWaxbaro/DoorBell'},
+    {name: 'bluetooth app', description: 'Bluetooth photo-sharing app is an application that helps to send and receive images through Bluetooth. This was a school project and we did as a group.', link: 'https://github.com/WaryaWaxbaro/bt-image-app-code'},
+    {name: 'door sensor', description: 'This is a Raspberry PI project that detects movement around the main door of a house, it captures images and sends via Telegram.', link: 'https://github.com/WaryaWaxbaro/DoorBell'},
   ],
   contact: [
     {icon: <FaEnvelope/>, name: 't5haab00@students.oamk.fi'},
