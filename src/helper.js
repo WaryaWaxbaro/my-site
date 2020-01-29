@@ -24,7 +24,7 @@ import {
 
 export const contentText = {
   about:
-    "I am a junior Software Developer. I have experience in Web and Mobile development. I am currently doing random projects with JavaScript, React and Node. My favourite programming language is JavaScript which I am still learning. I like using React for my personal projects because it is straight forward, I just need to close every open tag of a Component, or I will get a warning for not doing so.",
+    "I am a Junior Software Developer. I have experience in Web and Mobile development. I am currently doing random projects with JavaScript, React and Node and all other tools that are needed. My favourite programming language is JavaScript which I am still learning, I have also used Java a lot mainly in school projects. I am an open person who values cooperation and teamwork and I would like to participate in interesting projects to deliver precisely customer's expectations.",
   skills: {
     heading1: "Skill level Good",
     heading2: "Skill level Intermediate/Basic",
@@ -56,37 +56,37 @@ export const contentText = {
     {
       name: "client website",
       description:
-        "A client project. Used Reactjs Frontend, PHP backend and MySQL databe.",
+        "A client project. Used Reactjs Frontend, PHP backend and MySQL database.",
       link: "http://pohjoissomalialainen.com/"
     },
     {
       name: "shopping list",
       description:
-        "A simple console application in Java. You can add new item, update existing one, delete, check if an item is available and show all items.",
+        "A simple console application in Java. You can add a new item, update an existing one, delete, check if an item is available and show all items.",
       link: "https://github.com/WaryaWaxbaro/shoppingList"
     },
     {
       name: "share a joke",
       description:
-        "Share a Joke a MERN stack application that display's current weather in any city in the world by searching and shows list of jokes that were submitted. Jokes can be edited and removed.",
+        "Share a Joke is a MERN stack application that display's current weather in any city in the world by searching and shows list a of jokes that were submitted. Jokes can be edited and removed.",
       link: "https://joke-weather-api.herokuapp.com/"
     },
     {
       name: "word educator",
       description:
-        "Baro word educator is an application that displays images and it's corresponding names in different languages.",
+        "Baro word educator is an application that displays images and it's corresponding names in different languages. Used React and Material-UI.",
       link: "https://waryawaxbaro.github.io/Baro-word-educator/#/"
     },
     {
       name: "jar game",
       description:
-        "Jar Kabood is a game that the player moves over it's opponent's objects. The player get a point if it moves over and the opponent looses a soldier. Used HTML, CSS and JavaScript ES5",
+        "Jar Kabood is a game that the player moves over its opponent's objects. The player gets a point if it moves over and the opponent loses a soldier. Used HTML, CSS and JavaScript ES5.",
       link: "https://waryawaxbaro.github.io/portofolio/jarkabood.html"
     },
     {
       name: "my city",
       description:
-        "MyCity is a web application where a user can submit their favourite image of their city. Used Express, Mongodb, Passportjs and Bootstrap.",
+        "MyCity is a web application where a user can submit their favourite image of their city. Used Nodejs, Express, MongoDB, Passportjs and Bootstrap.",
       link: "https://stormy-dawn-25100.herokuapp.com/cities"
     },
     {
@@ -98,19 +98,19 @@ export const contentText = {
     {
       name: "lights out",
       description:
-        "Lights Out is a game that toggles patterns resembling light on and light off states. Used Reactjs and CSS",
+        "Lights Out is a game that toggles patterns resembling light on and light off states. Used Reactjs and CSS.",
       link: "https://waryawaxbaro.github.io/lightsout/"
     },
     {
       name: "menu & weather",
       description:
-        "A mobile application that displays OAMK's daily menu and weather forecast for that day. Android with Java",
+        "A mobile application that displays OAMK's daily menu and weather forecast for that day. Android with Java.",
       link: "https://github.com/WaryaWaxbaro/menuweather"
     },
     {
       name: "bluetooth app",
       description:
-        "Bluetooth photo-sharing app is an application that helps to send and receive images through Bluetooth. This was a school project and we did as a group. Used Android with Java",
+        "Bluetooth photo-sharing app is an application that helps to send and receive images through Bluetooth. This was a school project and we did as a group. Used Android with Java.",
       link: "https://github.com/WaryaWaxbaro/bt-image-app-code"
     },
     {
