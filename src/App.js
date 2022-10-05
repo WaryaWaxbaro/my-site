@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Nav />
       <Routes>
-        {["about", "skills", "project", "contact"].map((name) => (
+        {["my-site", "about", "skills", "project", "contact"].map((name) => (
           <Route
             exact
             path={`/${name}`}
