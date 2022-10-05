@@ -6,7 +6,11 @@ export default function About() {
   return (
     <div className="About">
       <h1 className="heading">About me</h1>
-      <p className="paragraph">{about}</p>
+      {about.map((text, index) => (
+        <p key={index} className="paragraph">
+          {text}
+        </p>
+      ))}
     </div>
   );
 }
