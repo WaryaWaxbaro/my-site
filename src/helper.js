@@ -14,7 +14,6 @@ import {
   FaDatabase,
   FaCode,
   FaBootstrap,
-  FaGithubSquare,
   FaPhp,
   FaGithub,
   FaEnvelope,
@@ -148,7 +147,7 @@ export const contentText = {
     },
   ],
   contact: [
-    { icon: <FaEnvelope />, name: "contact@shakurmoller.com" },
+    { icon: <FaEnvelope />, name: "contact@shakurhassan.com" },
     { icon: <FaMobile />, name: "O458******" },
     { icon: <FaGithub />, name: "https://github.com/WaryaWaxbaro" },
     { icon: <FaTwitter />, name: "shakurHssn" },
