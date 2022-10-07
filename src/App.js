@@ -9,14 +9,16 @@ function App() {
     <div className="App">
       <Nav />
       <Routes>
-        {["my-site", "about", "skills", "project", "contact"].map((name) => (
-          <Route
-            exact
-            path={`/${name}`}
-            key={name}
-            element={<Container name={name} />}
-          />
-        ))}
+        {["", "my-site", "about", "skills", "project", "contact"].map(
+          (name) => (
+            <Route
+              exact
+              path={`/${name}`}
+              key={name}
+              element={<Container name={name} />}
+            />
+          )
+        )}
       </Routes>
       <Footer />
     </div>
