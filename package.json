@@ -11,7 +11,7 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.4.1"
   },
-  "homepage": "http://www.shakurhassan.com/my-site",
+  "homepage": "http://www.shakurhassan.com/static",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
